@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- RSS Feeds using iFrame -->
+<!-- RSS to HTML conversion provided by http://rss.bloople.net/ -->
+<!-- Dovi Wilensky, CS81, 31Jul2016 -->
+<html>
+	<script = "text/javascript"> <!-- ATTEMPTED: load an image associated with RSS feed -->
+/*		function loadImage1(img1) {
+		    document.getElementById('image1').src = img1;		   
+		}			
+		function loadImage2(img2) {
+		    document.getElementById('image2').src = img2;		   
+		}
+		function loadImage3(img3) {
+		    document.getElementById('image3').src = img3;		   
+		}	*/			
+	</script>
+	<style =  "text/css">
+		#wrapper{
+			display:-webkit-flex;
+			-webkit-justify-content:center;
+		display:flex;
+		justify-content:center;			}
+		#wrapper div{
+			-webkit-flex:1;
+			flex:1;
+			border:thin solid #777;		}
+		body {
+			background-color: lightblue;}	
+	</style>
+	<body>	
+		<h3> Assigning Live RSS feed to iFrames </h3>
+		<div id = wrapper>
+			<div id="column1" style="float:center; margin:0; width:33%;">	
+				<SELECT name="list1" onchange="document.getElementById('frame1').src = this.options[this.selectedIndex].value" onchange="loadImage1()" > <!-- in-line script: onChange event to assign RSS feed to iFrame -->
+					<option>Select RSS Feed</option>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fespn.go.com%2Fespn%2Frss%2Fnews&showempty=true&forceutf8=true&type=html">ESPN</option><img name = "espn" src='espn.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Frss.nytimes.com%2Fservices%2Fxml%2Frss%2Fnyt%2FHomePage.xml&showtitle=false&type=html">NY Times</option><img name = "nytimes" src='nytimes.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.tmz.com%2Frss.xml&showtitle=false&type=html">TMZ</option><img name = "tmz" src='tmz.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.spc.noaa.gov%2Fproducts%2Fspcrss.xml&showtitle=false&type=html">NOAA Weather</option>
+					<a><option value="http://rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Frss%2Fdyn%2Fbreaking_news.rss&showtitle=false&type=html">NASA</option><img name = "nasa" src='nasa.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.cnet.com%2Frss%2Fnews%2F&showtitle=false&type=html">CNET</option><img name = "cnet" src='cnet.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=https%3A%2F%2Frss.sciencedaily.com%2Fall.xml&showtitle=false&type=html">Science</option><img name = "science" src='science.jpg'></br></a>								
+				</SELECT> <br/>
+				<iframe name="frame1" id="frame1" src="" height = 700px; width = 650px; style="background-color:white;" border="0" frameborder="0" allowTransparency="true"> Your browser does not support in-line frames </iframe>
+<!--			<img name = "image1" src='image1' id="image1"></br>
+-->			</div>
+			<div id="column2" style="float:center; margin:0; width:33%;">		
+				<SELECT name="list2" onchange="document.getElementById('frame2').src = this.options[this.selectedIndex].value" onchange="loadImage2()" >
+					<option>Select RSS Feed</option>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fespn.go.com%2Fespn%2Frss%2Fnews&showempty=true&forceutf8=true&type=html">ESPN</option><img name = "espn" src='espn.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Frss.nytimes.com%2Fservices%2Fxml%2Frss%2Fnyt%2FHomePage.xml&showtitle=false&type=html">NY Times</option><img name = "nytimes" src='nytimes.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.tmz.com%2Frss.xml&showtitle=false&type=html">TMZ</option><img name = "tmz" src='tmz.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.spc.noaa.gov%2Fproducts%2Fspcrss.xml&showtitle=false&type=html">NOAA Weather</option>
+					<a><option value="http://rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Frss%2Fdyn%2Fbreaking_news.rss&showtitle=false&type=html">NASA</option><img name = "nasa" src='nasa.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.cnet.com%2Frss%2Fnews%2F&showtitle=false&type=html">CNET</option><img name = "cnet" src='cnet.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=https%3A%2F%2Frss.sciencedaily.com%2Fall.xml&showtitle=false&type=html">Science</option><img name = "science" src='science.jpg'></br></a>								
+				</SELECT> <br/>
+				<iframe name="frame2" id="frame2" src="" height = 700px; width = 650px; style="background-color:white;" border="0" frameborder="0" allowTransparency="true"> Your browser does not support in-line frames </iframe>	
+<!--			<img name = "image2" src='image2' id="image2"></br>
+-->			</div>	
+			<div id="column3" style="float:right; margin:0; width:33%;">	
+				<SELECT NAME="list3" onchange="document.getElementById('frame3').src = this.options[this.selectedIndex].value" onchange="loadImage3()" >
+					<option>Select RSS Feed</option>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fespn.go.com%2Fespn%2Frss%2Fnews&showempty=true&forceutf8=true&type=html">ESPN</option><img name = "espn" src='espn.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Frss.nytimes.com%2Fservices%2Fxml%2Frss%2Fnyt%2FHomePage.xml&showtitle=false&type=html">NY Times</option><img name = "nytimes" src='nytimes.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.tmz.com%2Frss.xml&showtitle=false&type=html">TMZ</option><img name = "tmz" src='tmz.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.spc.noaa.gov%2Fproducts%2Fspcrss.xml&showtitle=false&type=html">NOAA Weather</option>
+					<a><option value="http://rss.bloople.net/?url=https%3A%2F%2Fwww.nasa.gov%2Frss%2Fdyn%2Fbreaking_news.rss&showtitle=false&type=html">NASA</option><img name = "nasa" src='nasa.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=http%3A%2F%2Fwww.cnet.com%2Frss%2Fnews%2F&showtitle=false&type=html">CNET</option><img name = "cnet" src='cnet.jpg'></br></a>
+					<a><option value="http://rss.bloople.net/?url=https%3A%2F%2Frss.sciencedaily.com%2Fall.xml&showtitle=false&type=html">Science</option><img name = "science" src='science.jpg'></br></a>								
+				</SELECT> <br/>
+				<iframe name="frame3" id="frame3" src="" height = 700px; width = 650px; style="background-color:white;" border="0" frameborder="0" allowTransparency="true"> Your browser does not support in-line frames </iframe>		
+<!--			<img name = "image3" src='image3' id="image3"></br>	
+-->			</div>
+		</div>		
+	</body>
+</html>
